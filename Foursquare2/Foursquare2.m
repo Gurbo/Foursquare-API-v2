@@ -783,6 +783,8 @@ static NSMutableDictionary *attributes;
     if (price) {
         parameters[@"price"] = price;
     }
+    parameters[@"time"] = @"any";
+    parameters[@"open"] = @(0);
     return [self sendGetRequestWithPath:@"venues/explore" parameters:parameters callback:callback];
 }
 
